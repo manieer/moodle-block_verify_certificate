@@ -1,6 +1,4 @@
-# verify_certificate
-Moodle verify certificate block
-
+<?php
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -24,18 +22,22 @@ Moodle verify certificate block
  * Verifys certificate based on the unique codes displayed on issued certificates. 
  * Full details of the issued certificate is displayed including profile picture.
  * Mostly cosmetic changes to the original codes from Jean-Michel Védrine.
+ * Original Autor & Copyright - Jean-Michel Védrine | 2014
  *
- * @original_author     Jean-Michel Védrine | 2014
- * @original_copyright  Jean-Michel Védrine | 2014
  * @copyright           2015 onwards Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com>
  * @author              Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com> | 2015
  * @package             block_verify_certificate
  * @license             http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-/*
-* INSTALL:
-* Download the folder and install it to /blocks/ folder within Moodle installation.
-* You will need to make sure all certificates have PRINT CODE to Yes under certificate settings.
-*/
-
+$string['title'] = 'Verify Certificates';
+$string['pluginname'] = 'Verify Certificates';
+$string['certificate'] = 'VERIFICATION FOR CERTIFICATE CODE ::';
+$string['verifycertificate'] = 'Verify Certificate';
+$string['verify_certificate:addinstance'] = 'Add a new Verify Certificates block';
+$string['notfound'] = 'The certificate code you provided could not be validated.<br><br> Please make sure you have typed the code correctly as its case sensetive.';
+$string['to'] = 'AWARDED TO';
+$string['course'] = 'COURSE';
+$string['date'] = 'ON';
+$string['grade'] = 'GRADE';
+$string['check'] = 'Please make sure all the details on the certificate match the displayed results.';

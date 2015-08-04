@@ -1,6 +1,4 @@
-# verify_certificate
-Moodle verify certificate block
-
+<?php
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -24,18 +22,22 @@ Moodle verify certificate block
  * Verifys certificate based on the unique codes displayed on issued certificates. 
  * Full details of the issued certificate is displayed including profile picture.
  * Mostly cosmetic changes to the original codes from Jean-Michel Védrine.
+ * Original Autor & Copyright - Jean-Michel Védrine | 2014
  *
- * @original_author     Jean-Michel Védrine | 2014
- * @original_copyright  Jean-Michel Védrine | 2014
  * @copyright           2015 onwards Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com>
  * @author              Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com> | 2015
  * @package             block_verify_certificate
  * @license             http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-/*
-* INSTALL:
-* Download the folder and install it to /blocks/ folder within Moodle installation.
-* You will need to make sure all certificates have PRINT CODE to Yes under certificate settings.
-*/
+defined('MOODLE_INTERNAL') || die();
 
+$plugin->version  = 2015080400;                 // The current plugin version (Date: YYYYMMDDXX)
+$plugin->requires = 2014051203;                  // Requires this Moodle version 2.7.
+$plugin->cron = 0;                               // Period for cron to check this module (secs).
+$plugin->component = 'block_verify_certificate'; // To check on upgrade, that module sits in correct place.
+$plugin->maturity = MATURITY_STABLE;
+$plugin->release = 'v1';
+$plugin->dependencies = array(
+    'mod_certificate' => 2014041801
+);
