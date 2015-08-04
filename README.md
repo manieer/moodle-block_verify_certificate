@@ -21,12 +21,11 @@ Moodle verify certificate block
  * 
  * Verify certificate block
  * --------------------------
- * Verifys certificate based on the unique codes displayed on issued certificates. 
+ * Verify certificate based on the unique codes displayed on issued certificates. 
  * Full details of the issued certificate is displayed including profile picture.
  * Mostly cosmetic changes to the original codes from Jean-Michel Védrine.
+ * Original Autor & Copyright - Jean-Michel Védrine | 2014
  *
- * @original_author     Jean-Michel Védrine | 2014
- * @original_copyright  Jean-Michel Védrine | 2014
  * @copyright           2015 onwards Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com>
  * @author              Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com> | 2015
  * @package             block_verify_certificate

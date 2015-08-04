@@ -19,7 +19,7 @@
  * 
  * Verify certificate block
  * --------------------------
- * Verifys certificate based on the unique codes displayed on issued certificates. 
+ * Verify certificate based on the unique codes displayed on issued certificates. 
  * Full details of the issued certificate is displayed including profile picture.
  * Mostly cosmetic changes to the original codes from Jean-Michel Védrine.
  * Original Autor & Copyright - Jean-Michel Védrine | 2014
@@ -30,11 +30,11 @@
  * @license             http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['title'] = 'Verify Certificates';
-$string['pluginname'] = 'Verify Certificates';
+$string['title'] = 'Verify Certificate';
+$string['pluginname'] = 'Verify Certificate';
 $string['certificate'] = 'VERIFICATION FOR CERTIFICATE CODE ::';
 $string['verifycertificate'] = 'Verify Certificate';
-$string['verify_certificate:addinstance'] = 'Add a new Verify Certificates block';
+$string['verify_certificate:addinstance'] = 'Add a new Verify Certificate block';
 $string['notfound'] = 'The certificate code you provided could not be validated.<br><br> Please make sure you have typed the code correctly as its case sensetive.';
 $string['to'] = 'AWARDED TO';
 $string['course'] = 'COURSE';
