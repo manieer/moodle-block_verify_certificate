@@ -1,0 +1,92 @@
+/** This file is part of Moodle - http://moodle.org/
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Version details
+ * 
+ * Verify certificate block
+ * --------------------------
+ * Verify certificate based on the unique codes displayed on issued certificates. 
+ * Full details of the issued certificate is displayed including profile picture.
+ * Mostly cosmetic changes to the original codes from Jean-Michel Védrine.
+ * Original Autor & Copyright - Jean-Michel Védrine | 2014
+ *
+ * @copyright           2015 onwards Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com>
+ * @author              Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com> | 2015
+ * @package             block_verify_certificate
+ * @license             http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+p.notVerified {
+	color: #F00;
+	font-size:large;
+	font-weight:bold;
+}
+
+p.verified {
+	color: #393;
+	font-size:large;
+	font-weight:bold;
+}
+
+
+.left {
+	float: left;
+	width: 75%;
+	margin-top: 10px;
+}
+
+.right {
+	float: right;
+	width: 25%;
+	margin-top: 10px;
+}
+
+.wrapper-box:after {
+	content:"";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 480px) {
+.left, .right {
+	float: none;
+	width: auto;
+  }
+}
+
+
+
+
+/*
+.block_verify_certificate .noDateSet{text-align: center;}
+.block_verify_certificate .numberTypeWrapper{display: inline-block;}
+.block_verify_certificate .numberTypeWrapper .timerNum{display: block;}
+.block_verify_certificate .numberTypeWrapper p{font-size: 0.65em; text-align: center; margin: 0;}
+.block_verify_certificate .timerNumChar{
+	background: url([[pix:block_enrolmenttimer|background]]) repeat-x;
+	color: #fff;
+	margin: 2px;
+	padding: 3px;
+	font-size: 1.3em;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.block_verify_certificate .seperator{color: #000; display: inline-block; font-weight: bold; vertical-align: top; line-height: 30px;}
+.block_verify_certificate .timer-wrapper{margin: 1em auto 0.6em auto; display: table;}
+.block_verify_certificate  p{text-align: center; margin:0 0 10px 0;}
+.block_verify_certificate .text-wrapper{margin-top: 10px;}
+.block_verify_certificate .text-wrapper .text-desc{font-size: 0.65em; margin: 0;}
+.block_verify_certificate .text-wrapper .sub-text{font-size: 0.8em;}
+*/

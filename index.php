@@ -33,7 +33,6 @@
 require_once("../../config.php");
 require_once($CFG->dirroot . '/mod/certificate/lib.php');
 require_once($CFG->dirroot.'/mod/certificate/locallib.php');
-global $DB;
 
 $id = required_param('certnumber', PARAM_ALPHANUM);   // Certificate code to verify.
 
@@ -44,11 +43,11 @@ $context = context_system::instance();
 $PAGE->set_context($context);
 
 // Print the header.
-
 $PAGE->navbar->add($strverify);
 $PAGE->set_title($strverify);
 $PAGE->set_heading($strverify);
 $PAGE->requires->css('/blocks/verify_certificate/printstyle.css');
+$PAGE->requires->css('/blocks/verify_certificate/styles.css');
 echo $OUTPUT->header();
 
 $ufields = user_picture::fields('u');
@@ -65,13 +64,12 @@ $certificates = $DB->get_records_sql($sql, array($id));
 
 if (! $certificates) {
     echo $OUTPUT->box_start('generalbox boxaligncenter');
-    echo '<p><b><font color="#d5032a" size="3">' . get_string('certificate', 'block_verify_certificate')
-         . ' "' . $id . '" ' . '</font></b></p>';
-    echo '<table width ="100%" cellpadding="5px"><tr><td>';
-    echo get_string('notfound', 'block_verify_certificate');
-    echo '</td><td>';
-    echo "<img src=\"pix/certnotverified.png\" height=\"240\" width=\"155\" border=\"0\" align=\"center\"></img>";
-    echo '</td></tr></table>';
+    echo '<p class="notVerified">' . get_string('certificate', 'block_verify_certificate')
+         . ' "' . $id . '" ' . '</p>';
+	echo '<div class="wrapper-box"><br>';
+    echo '<div class="left"><br>' .get_string('notfound', 'block_verify_certificate').'</div>';    
+    echo '<div class="right"><img src="pix/certnotverified.png" border="0" align="center"></div>';
+	echo '</div>';	
     echo $OUTPUT->box_end();
 } else {
     echo $OUTPUT->box_start('generalbox boxaligncenter');
@@ -81,7 +79,7 @@ if (! $certificates) {
 
     // Print Section.
     foreach ($certificates as $certdata) {
-        echo '<p><b><font color="#006600" size="3">' . get_string('certificate', 'block_verify_certificate')
+        echo '<p class = "verified">' . get_string('certificate', 'block_verify_certificate')
         . ' "' . $certdata->code . '" ' . '</font></b></p>';
         echo '<table width ="100%" cellpadding="5px"><tr><td>';
         echo '<div class="userprofilebox clearfix"><div class="profilepicture">';
@@ -96,7 +94,7 @@ if (! $certificates) {
         }
 
          // Date format.
-         $dateformat = get_string('strfdateshortmonth', 'langconfig');
+		 $dateformat = get_string('strftimedate', 'langconfig');
 
         // Modify printdate so that date is always printed.
         $certdata->printdate = 1;
@@ -117,7 +115,7 @@ if (! $certificates) {
             echo '<p><b>' . get_string('grade', 'block_verify_certificate') . ': </b>' . $grade . '<br /></p>';
         }
         echo '</td><td>';
-        echo "<img src=\"pix/certverified.png\" height=\"240\" width=\"155\" border=\"0\" align=\"center\"></img>";
+        echo "<img src=\"pix/certverified.png\" border=\"0\" align=\"center\"></img>";
         echo '</td></tr></table></br>';
         echo '<p><b>' . get_string('check', 'block_verify_certificate') . '</b></p>';
     }

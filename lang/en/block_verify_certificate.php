@@ -30,11 +30,11 @@
  * @license             http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['title'] = 'Verify Certificate';
-$string['pluginname'] = 'Verify Certificate';
+$string['title'] = 'Verify certificate';
+$string['pluginname'] = 'Verify certificate';
 $string['certificate'] = 'VERIFICATION FOR CERTIFICATE CODE ::';
-$string['verifycertificate'] = 'Verify Certificate';
-$string['verify_certificate:addinstance'] = 'Add a new Verify Certificate block';
+$string['verifycertificate'] = 'Verify certificate';
+$string['verify_certificate:addinstance'] = 'Add a new Verify certificate block';
 $string['notfound'] = 'The certificate code you provided could not be validated.<br><br> Please make sure you have typed the code correctly as its case sensetive.';
 $string['to'] = 'AWARDED TO';
 $string['course'] = 'COURSE';
