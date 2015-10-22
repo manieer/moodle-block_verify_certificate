@@ -30,15 +30,37 @@
  * @license             http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+/**
+ * Verify certificate block class
+ *
+ * @copyright 2015 onwards Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com>
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class block_verify_certificate extends block_base {
-
+	
+	/**
+     * Sets the block title
+     *
+     * @return void
+     */
     public function init() {
         $this->title = get_string('title', 'block_verify_certificate');
     }
 
-    public function applicable_formats() {
+    /**
+     * Defines where the block can be added
+     *
+     * @return array
+     */
+	public function applicable_formats() {
         return array('all' => true);
     }
+	
+	/**
+     * Creates the blocks main content
+     *
+     * @return string
+     */
     public function get_content() {
 
         if ($this->content !== null) {
@@ -57,6 +79,12 @@ class block_verify_certificate extends block_base {
 
         return $this->content;
     }
+	
+	 /**
+     * Controls whether the block is configurable
+     *
+     * @return boolean
+     */
     public function instance_allow_config() {
         return false;
     }
