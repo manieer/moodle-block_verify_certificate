@@ -32,6 +32,8 @@
 
 $string['title'] = 'Проверить сертификат';
 $string['pluginname'] = 'Проверка сертификатов';
+$string['verify_certificate:myaddinstance'] = 'Добавить экземпляр сертификата'; //?
+
 $string['certificate'] = 'Проверка кода сертификата ::';
 $string['verifycertificate'] = 'Проверить сертификат';
 $string['verify_certificate:addinstance'] = 'Добавить новый блок проверки сертификата';

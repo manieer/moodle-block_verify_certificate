@@ -32,6 +32,8 @@
 
 $string['title'] = 'Verify certificate';
 $string['pluginname'] = 'Verify certificate';
+$string['verify_certificate:myaddinstance'] = 'Add certificate instance';
+
 $string['certificate'] = 'VERIFICATION FOR CERTIFICATE CODE ::';
 $string['verifycertificate'] = 'Verify certificate';
 $string['verify_certificate:addinstance'] = 'Add a new Verify certificate block';
