@@ -16,10 +16,10 @@
 
 /**
  * Version details
- * 
+ *
  * Verify certificate block
  * --------------------------
- * Verify certificate based on the unique codes displayed on issued certificates. 
+ * Verify certificate based on the unique codes displayed on issued certificates.
  * Full details of the issued certificate is displayed including profile picture.
  * Mostly cosmetic changes to the original codes from Jean-Michel Védrine.
  * Original Autor & Copyright - Jean-Michel Védrine | 2014
@@ -31,6 +31,7 @@
  */
 
 require_once("../../config.php");
+require_login();
 require_once($CFG->dirroot . '/mod/certificate/lib.php');
 require_once($CFG->dirroot.'/mod/certificate/locallib.php');
 
@@ -64,12 +65,13 @@ $certificates = $DB->get_records_sql($sql, array($id));
 
 if (! $certificates) {
     echo $OUTPUT->box_start('generalbox boxaligncenter');
+    echo '<div id="block_verify_certificate"><br>';
     echo '<p class="notVerified">' . get_string('certificate', 'block_verify_certificate')
          . ' "' . $id . '" ' . '</p>';
-	echo '<div class="wrapper-box"><br>';
-    echo '<div class="left"><br>' .get_string('notfound', 'block_verify_certificate').'</div>';    
+    echo '<div class="wrapper-box"><br>';
+    echo '<div class="left"><br>' .get_string('notfound', 'block_verify_certificate').'</div>';
     echo '<div class="right"><img src="pix/certnotverified.png" border="0" align="center"></div>';
-	echo '</div>';	
+    echo '</div></div>';
     echo $OUTPUT->box_end();
 } else {
     echo $OUTPUT->box_start('generalbox boxaligncenter');
@@ -93,8 +95,8 @@ if (! $certificates) {
             echo '<p><b>' . get_string('course', 'block_verify_certificate') . ': </b>' . $course->fullname . '<br />';
         }
 
-         // Date format.
-		 $dateformat = get_string('strftimedate', 'langconfig');
+        // Date format.
+        $dateformat = get_string('strftimedate', 'langconfig');
 
         // Modify printdate so that date is always printed.
         $certdata->printdate = 1;

@@ -1,8 +1,10 @@
 @media print {
 body {
-    background:#FFFFFF;
+    background: #fff;
 }
-    #header, #header-home {
+
+    #header, 
+    #header-home {
         display: none;
     }
 
@@ -11,10 +13,10 @@ body {
     }
 
     .navbar {
-    display:none;
+        display: none;
     }
 
     .printicon {
-    display:none;
+        display: none;
     }
 }

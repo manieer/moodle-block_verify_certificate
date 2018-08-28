@@ -16,10 +16,10 @@
 
 /**
  * Version details
- * 
+ *
  * Verify certificate block
  * --------------------------
- * Verify certificate based on the unique codes displayed on issued certificates. 
+ * Verify certificate based on the unique codes displayed on issued certificates.
  * Full details of the issued certificate is displayed including profile picture.
  * Mostly cosmetic changes to the original codes from Jean-Michel Védrine.
  * Original Autor & Copyright - Jean-Michel Védrine | 2014
@@ -32,12 +32,12 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version  = 2015080600;                 // The current plugin version (Date: YYYYMMDDXX)
-$plugin->requires = 2014051203;                  // Requires this Moodle version 2.7.
+$plugin->version  = 2018082300;                 // The current plugin version (Date: YYYYMMDDXX)
+$plugin->requires = 2010112400;                  // Requires this Moodle version 2.
 $plugin->cron = 0;                               // Period for cron to check this module (secs).
 $plugin->component = 'block_verify_certificate'; // To check on upgrade, that module sits in correct place.
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'v1.1.0';
+$plugin->release = 'Version 3.5';
 $plugin->dependencies = array(
-    'mod_certificate' => 2014041801
+    'mod_certificate' => ANY_VERSION
 );

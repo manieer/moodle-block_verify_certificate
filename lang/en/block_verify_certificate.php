@@ -16,10 +16,10 @@
 
 /**
  * Version details
- * 
+ *
  * Verify certificate block
  * --------------------------
- * Verify certificate based on the unique codes displayed on issued certificates. 
+ * Verify certificate based on the unique codes displayed on issued certificates.
  * Full details of the issued certificate is displayed including profile picture.
  * Mostly cosmetic changes to the original codes from Jean-Michel Védrine.
  * Original Autor & Copyright - Jean-Michel Védrine | 2014
@@ -33,11 +33,13 @@
 $string['title'] = 'Verify certificate';
 $string['pluginname'] = 'Verify certificate';
 $string['certificate'] = 'VERIFICATION FOR CERTIFICATE CODE ::';
-$string['verifycertificate'] = 'Verify certificate';
+$string['verifycertificate'] = 'Verify Certificate';
 $string['verify_certificate:addinstance'] = 'Add a new Verify certificate block';
-$string['notfound'] = 'The certificate code you provided could not be validated.<br><br> Please make sure you have typed the code correctly as its case sensetive.';
+$string['notfound'] = 'The certificate code you provided could not be validated.<br><br> Please make sure you have typed the code correctly as it is case sensetive.';
 $string['to'] = 'AWARDED TO';
 $string['course'] = 'COURSE';
 $string['date'] = 'ON';
 $string['grade'] = 'GRADE';
 $string['check'] = 'Please make sure all the details on the certificate match the displayed results.';
+$string['entercode'] = 'Enter certificate code to verify:';
+$string['validate'] = 'Verify';

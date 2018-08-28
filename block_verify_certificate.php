@@ -16,10 +16,10 @@
 
 /**
  * Version details
- * 
+ *
  * Verify certificate block
  * --------------------------
- * Verify certificate based on the unique codes displayed on issued certificates. 
+ * Verify certificate based on the unique codes displayed on issued certificates.
  * Full details of the issued certificate is displayed including profile picture.
  * Mostly cosmetic changes to the original codes from Jean-Michel Védrine.
  * Original Autor & Copyright - Jean-Michel Védrine | 2014
@@ -29,6 +29,7 @@
  * @package             block_verify_certificate
  * @license             http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+defined('MOODLE_INTERNAL') || die();
 
 /**
  * Verify certificate block class
@@ -36,9 +37,9 @@
  * @copyright 2015 onwards Manieer Chhettri | Marie Curie, UK | <manieer@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 class block_verify_certificate extends block_base {
-	
-	/**
+    /**
      * Sets the block title
      *
      * @return void
@@ -52,11 +53,11 @@ class block_verify_certificate extends block_base {
      *
      * @return array
      */
-	public function applicable_formats() {
+    public function applicable_formats() {
         return array('all' => true);
     }
-	
-	/**
+
+    /**
      * Creates the blocks main content
      *
      * @return string
@@ -68,19 +69,17 @@ class block_verify_certificate extends block_base {
         }
 
         $this->content = new stdClass;
-        $this->content->text = '<p>'.get_string('entercode', 'certificate').'</p>';
+        $this->content->text = '<p>'.get_string('entercode', 'block_verify_certificate').'</p>';
         $url = new moodle_url('/blocks/verify_certificate/index.php');
-        $this->content->text .= '<center><form class="loginform" name="cert" method="post" action="'. $url . '">';
-
-        $this->content->text .= '<input type="text" name="certnumber" id=name="certnumber" size="15" value="" />';
-        $this->content->text .= '<input type="submit" value="'.get_string('validate', 'certificate').'"/></form>';
-        $this->content->text .= '<center>';
+        $this->content->text .= '<form name="cert" method="post" action="'. $url . '">';
+        $this->content->text .= '<input type="text" id="certcode" name="certnumber" size="20" value="" />';
+        $this->content->text .= '<input type="submit" value="'.get_string('validate', 'block_verify_certificate').'/></form>';
         $this->content->footer = '';
 
         return $this->content;
     }
-	
-	 /**
+
+    /**
      * Controls whether the block is configurable
      *
      * @return boolean
