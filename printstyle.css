@@ -1,0 +1,22 @@
+@media print {
+body {
+    background: #fff;
+}
+
+    #header,
+    #header-home {
+        display: none;
+    }
+
+    #footer {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .printicon {
+        display: none;
+    }
+}
