@@ -34,11 +34,11 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
 
-    'block/verify_certificate:myaddinstance' => array(
+    'block/verify_certificate:addinstance' => array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => array(
-            'user' => CAP_ALLOW
+        'user' => CAP_ALLOW
         ),
 
         'clonepermissionsfrom' => 'moodle/my:manageblocks'
@@ -50,8 +50,8 @@ $capabilities = array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_BLOCK,
         'archetypes' => array(
-            'editingteacher' => CAP_ALLOW,
-            'manager' => CAP_ALLOW
+        'editingteacher' => CAP_ALLOW,
+        'manager' => CAP_ALLOW
         ),
 
         'clonepermissionsfrom' => 'moodle/site:manageblocks'

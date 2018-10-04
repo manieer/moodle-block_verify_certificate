@@ -43,4 +43,3 @@ $string['grade'] = 'GRADE';
 $string['check'] = 'Please make sure all the details on the certificate match the displayed results.';
 $string['entercode'] = 'Enter certificate code to verify:';
 $string['validate'] = 'Verify';
-$string['privacy:metadata'] = 'The Verify certificate block only shows data about certificates and does not store any data itself.';

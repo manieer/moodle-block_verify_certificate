@@ -53,8 +53,9 @@ echo $OUTPUT->header();
 
 $ufields = user_picture::fields('u');
 
-$sql = "SELECT ci.timecreated AS citimecreated,
-               ci.code, ci.certificateid, ci.userid, $ufields, c.*, u.id AS id, u.*
+$sql = "SELECT ci.code, ci.timecreated AS citimecreated,
+               ci.certificateid, ci.userid,
+               c.*, $ufields, u.id AS id, u.*
           FROM {certificate_issues} ci
     INNER JOIN {user} u
             ON u.id = ci.userid
