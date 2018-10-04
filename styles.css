@@ -32,35 +32,29 @@
     font-size: large;
     font-weight: bold;
 }
-
 #block_verify_certificate p.verified {
     color: #393;
     font-size: large;
     font-weight: bold;
 }
-
 #block_verify_certificate .left {
     float: left;
     width: 75%;
     margin-top: 10px;
 }
-
 #block_verify_certificate .right {
     float: right;
     width: 25%;
     margin-top: 10px;
 }
-
 #block_verify_certificate .wrapper-box:after {
     content: "";
     display: table;
     clear: both;
 }
-
 @media screen and (max-width: 480px) {
-    #block_verify_certificate .left,
-    .right {
+    #block_verify_certificate .left, .right {
         float: none;
         width: auto;
-  }
+    }
 }
