@@ -16,10 +16,10 @@
 
 /**
  * Version details
- *
+ * 
  * Verify certificate block
  * --------------------------
- * Verify certificate based on the unique codes displayed on issued certificates.
+ * Verify certificate based on the unique codes displayed on issued certificates. 
  * Full details of the issued certificate is displayed including profile picture.
  * Mostly cosmetic changes to the original codes from Jean-Michel Védrine.
  * Original Autor & Copyright - Jean-Michel Védrine | 2014
@@ -30,18 +30,16 @@
  * @license             http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['title'] = 'Verify certificate';
-$string['pluginname'] = 'Verify certificate';
-$string['verify_certificate:myaddinstance'] = 'Add certificate instance';
+$string['title'] = 'Проверить сертификат';
+$string['pluginname'] = 'Проверка сертификатов';
+$string['verify_certificate:myaddinstance'] = 'Добавить экземпляр сертификата'; //?
 
-$string['certificate'] = 'VERIFICATION FOR CERTIFICATE CODE ::';
-$string['verifycertificate'] = 'Verify Certificate';
-$string['verify_certificate:myaddinstance'] = 'Add a new Verify certificate block';
-$string['notfound'] = 'The certificate code you provided could not be validated.<br><br> Please make sure you have typed the code correctly as it is case sensetive.';
-$string['to'] = 'AWARDED TO';
-$string['course'] = 'COURSE';
-$string['date'] = 'ON';
-$string['grade'] = 'GRADE';
-$string['check'] = 'Please make sure all the details on the certificate match the displayed results.';
-$string['entercode'] = 'Enter certificate code to verify:';
-$string['validate'] = 'Verify';
+$string['certificate'] = 'Проверка кода сертификата ::';
+$string['verifycertificate'] = 'Проверить сертификат';
+$string['verify_certificate:addinstance'] = 'Добавить новый блок проверки сертификата';
+$string['notfound'] = 'Код сертификата, который Вы предоставили недействителен.<br><br> Пожалуйста, проверьте, что Вы правильно ввели все буквы кода с учётом регистра.';
+$string['to'] = 'Выдан';
+$string['course'] = 'Курс';
+$string['date'] = 'Дата';
+$string['grade'] = 'Оценка';
+$string['check'] = 'Пожалуйста, проверьте все ли данные сертификата соответствуют отображённым на этой странице.';
