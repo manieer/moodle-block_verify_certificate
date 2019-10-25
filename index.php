@@ -31,7 +31,9 @@
  */
 
 require_once("../../config.php");
-require_login();
+if ($CFG->block_verify_certificate_requirelogin) {
+    require_login();
+}
 require_once($CFG->dirroot . '/mod/certificate/lib.php');
 require_once($CFG->dirroot.'/mod/certificate/locallib.php');
 

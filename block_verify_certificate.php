@@ -88,4 +88,8 @@ class block_verify_certificate extends block_base {
         return false;
     }
 
+    public function has_config() {
+        return true;
+    }
+
 }
