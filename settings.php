@@ -29,19 +29,8 @@
  * @package             block_verify_certificate
  * @license             http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-$string['title'] = 'Verify certificate';
-$string['pluginname'] = 'Verify certificate';
-$string['certificate'] = 'VERIFICATION FOR CERTIFICATE CODE ::';
-$string['verifycertificate'] = 'Verify Certificate';
-$string['verify_certificate:myaddinstance'] = 'Add a new Verify certificate block';
-$string['notfound'] = 'The certificate code you provided could not be validated.<br><br> Please make sure you have typed the code correctly as it is case sensetive.';
-$string['to'] = 'AWARDED TO';
-$string['course'] = 'COURSE';
-$string['date'] = 'ON';
-$string['grade'] = 'GRADE';
-$string['check'] = 'Please make sure all the details on the certificate match the displayed results.';
-$string['entercode'] = 'Enter certificate code to verify:';
-$string['validate'] = 'Verify';
-$string['requirelogin'] = 'Require login';
-$string['descrequirelogin'] = 'Require login to validate the certificate.';
+defined('MOODLE_INTERNAL') || die;
+$settings->add(new admin_setting_configcheckbox('block_verify_certificate_requirelogin',
+						get_string('requirelogin', 'block_verify_certificate'),
+						get_string('descrequirelogin', 'block_verify_certificate'),
+						1));
